@@ -25,17 +25,17 @@ module.exports = app => {
         }
     });
 
-    router.post("/usuario/crear", rutasProtegidas, usuario.create); http://localhost:9595/administrador/usuario/crear
+    router.post("/usuario/crear", usuario.create); http://localhost:9595/administrador/usuario/crear
     
-    router.get("/usuario/listar", rutasProtegidas, usuario.findAll); //http://localhost:9595/administrador/usuario/listar
+    router.get("/usuario/listar", usuario.findAll); //http://localhost:9595/administrador/usuario/listar
     
-    router.get("/usuario/:id", rutasProtegidas, usuario.findOne); //http://localhost:9595/administrador/usuario/1
+    router.get("/usuario/:id", usuario.findOne); //http://localhost:9595/administrador/usuario/1
     
-    router.put("/usuario/:id", rutasProtegidas, usuario.update); //http://localhost:9595/administrador/usuario/1
+    router.put("/usuario/:id", usuario.update); //http://localhost:9595/administrador/usuario/1
     
-    router.delete("/usuario/:id", rutasProtegidas, usuario.delete); //http://localhost:9595/administrador/usuario/1
+    router.delete("/usuario/:id", usuario.delete); //http://localhost:9595/administrador/usuario/1
     
-    router.delete("/usuario/eliminar", rutasProtegidas, usuario.deleteAll);
+    router.delete("/usuario/eliminar", usuario.deleteAll);
     
     router.post("/login", usuario.login); //http://localhost:9595/administrador/login
     

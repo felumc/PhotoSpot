@@ -25,12 +25,13 @@ exports.create = (req, res) => {
         const passwordHash = bcrypt.hashSync(req.body.contrasenia, 10);
 
         const usuario = {
+          nombre: req.body.nombre,
+          apepat: req.body.apepat,
+          apemat: req.body.apemat,
           correo: req.body.correo,
+          usuario: req.body.usuario,
           contrasenia: passwordHash,
-          estatus: req.body.estatus,
-          fechaRegistro: req.body.fechaRegistro,
-          fechaVigencia: req.body.fechaVigencia,
-          rol_id: req.body.rol_id
+          rolId: req.body.rolId
         };
 
         // Guardar Usuario en la base de datos
@@ -173,19 +174,12 @@ exports.deleteAll = (req, res) => {
     });
 };
 
-
 //Login por correo electronico
 exports.login = (req, res) => {
   const correo = req.body.correo;
   const pwd = req.body.contrasenia;
   console.log("correo: " + correo);
-  Usuario.findOne({
-    include: [
-      {
-        model: db.rol,
-      }
-    ],
-  }, { where: { correo: correo, estatus: true } })
+  Usuario.findOne({ where: { correo: req.body.correo } })
     .then(usuario => {
       if (usuario) {
         const verified = bcrypt.compareSync(pwd, usuario.contrasenia);
@@ -208,13 +202,19 @@ exports.login = (req, res) => {
             },
             usuario: usuario
           }
-          return res.status(200).send(salida);
+          
+          if(usuario.rolId==1){
+            return res.status(200).send(salida);
+          }else if(usuario.rolId==2){
+            return res.status(201).send(salida);
+          }
+          
 
           //res.status(200).send(usuario);
 
         } else {
           return res.status(404).send({
-            mensaje: "Error de validación",
+            mensaje: "Error de validación1",
           });
         }
       } else {
@@ -230,3 +230,4 @@ exports.login = (req, res) => {
       });
     });
 };
+

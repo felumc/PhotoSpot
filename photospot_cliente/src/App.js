@@ -1,16 +1,22 @@
-import logo from './logo.svg';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-//import LoginUsers from './pages/LoginUsers';
-//import RegisterUsers from './pages/RegisterUsers';
-import Contacto from './pages/Contacto';
+import 'bootstrap/dist/js/bootstrap.bundle';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Routes, Route } from "react-router-dom";
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import Inicio from './pages/Inicio';
+import ContactoPage from './pages/ContactoPage';
 
 function App() {
   return (
-    <div className="App">
-      <Contacto /> 
-      
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/Register" element={<RegisterPage />} />
+        <Route path="/Inicio" element={<Inicio />} />
+        <Route path="/Contacto" element={<ContactoPage />} />
+      </Routes>
+    </>
   );
 }
 

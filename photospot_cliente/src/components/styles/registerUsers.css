@@ -1,37 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
 
-*{
-    font-family: "Montserrat"; /*Estilo de font*/
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding: 0;
+
+.CuadroLoginR {
     font-size: 20px;
-}  
-body{
-    background-color: #ebdede;
+    font-family: "Montserrat"; 
+    left: 50%;
+    top: 60%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    height: 750px;
+    border-radius: 30px;
+    background-color: #d9d9d9;
+    display: flex;
 }
 
-.mainWrapper{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    position: fixed;
-    align-items: center;
-}
-.CuadroLogin{
-    width: 750px;
-    height: 500px;
-    border-radius: 30px;
-    background-color: #ffffff;
-    display: flex;
-}
-.Izquierda img{
-    margin-top: 20px;
-    height: 460px;
+.IzquierdaR img {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 40px;
+    object-fit: cover;
+    height: 680px;
     width: 320px;
     border-radius: 30px;
+    margin-left: 10%;
 }
-.Derecha{
+
+.DerechaR {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
     margin-right: 60px;
     margin-top: 5%;
     float: right;
@@ -39,61 +37,81 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.foto{
+.FormR{
+    float: right;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto {
     padding-inline: 50%;
 }
-.Derecha img{
+
+.DerechaR img {
     width: 300px;
     border-radius: 30px;
 }
 
-.input{
+.input {
     margin-top: 15px;
     padding-inline-start: 20px;
     padding-inline-end: 70px;
     padding-block: 10px;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
+    
 }
-.white{
+input:focus {
+    outline:none!important;
+}
+
+.white {
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
-.font{
+
+.font {
     font-family: "Montserrat";
     font-size: 0.8em;
     color: black;
 }
-button{
+
+.EntrarR {
     background: #D64E4E;
     padding: 10px;
     padding-inline: 40px;
     border: none;
     border-radius: 30px;
-    margin-top: 6%;
+    margin-top: 10%;
     cursor: pointer;
     color: white;
     font-size: 0.8em;
+    text-decoration: none;
 }
-.button2{
-    background: #ffffff;
+
+.button2R {
+    text-decoration: none;
+    background: #f5f5f5;
     padding: 10px;
     padding-inline: 40px;
     border: none;
-    border-radius: 15px;
-    margin-top: 6%;
+    border-radius: 30px;
+    margin-top: 10%;
     cursor: pointer;
     color: #7c7c7c;
     font-size: 0.8em;
     text-decoration: none;
-    
+
 }
 
-.RecoverPass{
-    font-size: 12px;
-    margin-top: 10px;
-    color: #7c7c7c;
+a {
+
+    text-decoration: none;
 }
-input{
+
+
+
+input {
     background-color: #f5f5f5;
     border: none;
     border-radius: 30px;

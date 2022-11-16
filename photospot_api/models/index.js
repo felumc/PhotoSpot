@@ -26,11 +26,11 @@ db.usuario = require("./usuario.model.js")(sequelize, Sequelize);
 //establecer las relaciones
 //-----------tabla usuario
 db.rol.hasMany(db.usuario, {
-    foreignKey: "rol_id",
+    foreignKey: "rolId",
 });
 
 db.usuario.belongsTo(db.rol, {
-    foreignKey: "rol_id",
+    foreignKey: "rolId",
 });
 
 module.exports = db;

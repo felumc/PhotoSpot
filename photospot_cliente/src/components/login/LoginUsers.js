@@ -31,7 +31,7 @@ function LoginUsers() {
                 navigate('/Inicio');
             }
             else if (res.status === 200){
-                navigate('/Dashboard');
+                navigate('/DashboardRoles');
             }
             else {
                 alert("Error al iniciar sesión, verifique sus datos");

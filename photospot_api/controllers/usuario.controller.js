@@ -40,18 +40,11 @@ exports.create = (req, res) => {
             res.status(200).send(usuario);
           })
           .catch(err => {
-            // res.status(500).send({
-            //   mensaje:
-            //     err.message || "Ocurrio un error al crear Rol."
-            // });
             res.status(500).sendFile(path.join(__dirname, '../source/img', 'error.png'));
           });
       }
     })
     .catch(err => {
-      // res.status(500).send({
-      //   mensaje: "Error al recuperar Usuario por correo"
-      // });
       res.status(500).sendFile(path.join(__dirname, '../source/img', 'error.png'));
     });
 };
@@ -209,12 +202,9 @@ exports.login = (req, res) => {
             return res.status(201).send(salida);
           }
           
-
-          //res.status(200).send(usuario);
-
         } else {
           return res.status(404).send({
-            mensaje: "Error de validación1",
+            mensaje: "Error de validación",
           });
         }
       } else {

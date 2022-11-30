@@ -11,6 +11,8 @@ function NavBarDashboard() {
         <Navbar.Brand href="/"><img src={logo} alt="Logo" style={{height: '40px'}}/></Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
           <Nav className="me-auto" >
+            <Button variant="warning" href="/DashboardRoles" style={{marginRight: '100px'}}>Dashboard Roles</Button>
+            <Button variant="warning" href="/DashboardUsuarios" style={{marginRight: '100px'}}>Dashboard Usuarios</Button>
             <Button variant="danger" href="/">Cerrar Sesion</Button>
           </Nav>
         </Navbar.Collapse>

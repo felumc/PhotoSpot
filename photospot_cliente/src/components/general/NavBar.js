@@ -13,8 +13,7 @@ function NavBar() {
           <Nav className="me-auto" >
             <Nav.Link href="#" style={{marginRight: '50px'}}>Spots</Nav.Link>
             <Nav.Link href="/Contacto" style={{marginRight: '50px'}}>Contacto</Nav.Link>
-            <Nav.Link href="/" style={{marginRight: '50px'}}>Login</Nav.Link>
-            <Button variant="danger" href="/Register">Sign Up</Button>
+            <Button variant="danger" href="/">Cerrar Sesion</Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
